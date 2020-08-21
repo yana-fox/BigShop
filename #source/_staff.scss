@@ -1,0 +1,122 @@
+.staff-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	width: 352px;
+	height: 452px;
+	&__image {
+		margin: 0px 0px 28px 0px;
+		display: block;
+		img{
+			object-fit: scale-down;
+		}
+	}
+
+	&__title {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 18px;
+		line-height: 25px;
+		letter-spacing: 0.18px;
+		color: #777777;
+		margin: 0px 0px 11px 0px;
+	}
+
+	&__price {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 25px;
+		letter-spacing: 0.25px;
+		color: #333333;
+	}
+
+	&-feedback{
+		// display: none;
+		visibility: hidden;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		color: #bbbbbb;
+		line-height: 25px;
+		letter-spacing: 0.14px;
+		&__likes{
+			display: flex;
+			align-items: center;
+			padding: 23px 0px 0px 21px;
+			&:before{
+				content: '';
+				display: inline-block;
+				position: relative;
+				top: 0;
+				left: 0;
+				background-image: url('../img/staff/like.png');
+				width: 20px;
+				height: 18px;
+			}
+
+		}
+		&__comments{
+			display: flex;
+			align-items: center;
+			padding: 22px 19px 0px 0px;
+			&:before{
+				content: '';
+				display: inline-block;
+				position: relative;
+				top: 0;
+				left: 0;
+				background-image: url('../img/staff/comment.png');
+				width: 25px;
+				height: 21px;
+			}
+
+		}
+		
+	}
+
+	&__btn{
+		display: none;
+		height: 60px;
+		border-radius: 30px;
+		box-shadow: -1px 5px 24px 1px rgba(240, 239, 254, 0.75);
+		background-color: #fcfcfc;
+		background-image: linear-gradient(26deg, #8c84f9 0%, #a165f4 100%);
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 60px;
+		color: #ffffff;
+		padding: 0px 47px;
+		position: relative;
+		top: 45px;
+		left: 0;
+		cursor: pointer;
+		@media (max-width: $md4+px){
+			height: 40px;
+			line-height: 40px;
+			top: 33px;
+			font-size: 16px;
+		}
+	}
+
+	&:hover{
+		box-shadow: -1px 5px 48px 3px rgba(221, 223, 224, 0.75);
+		transition: all 1s ease 0s;
+		.staff-card-feedback{
+			visibility: visible;
+			transition: all 2s ease 0s;
+		}
+		.staff-card__btn{
+			display: block;
+			transition: all 2s ease 0s;
+		}
+	}
+	@media (max-width: $md4+px){
+		width: 302px;
+		height: 432px;
+	}
+}

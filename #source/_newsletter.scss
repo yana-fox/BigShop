@@ -1,0 +1,108 @@
+.newsletter {
+	background-color: #8c84f9;
+	background-image: linear-gradient(45deg, #8c84f9 0%, #a165f4 100%), url('../img/newsletter/get_notified.png');
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: -133px 0px 0px 0px;
+	&__title {
+		font-family: 'Open Sans',sans-serif;
+		font-size: 50px;
+		font-weight: 700;
+		letter-spacing: 0.5px;
+		color: #ffffff;
+		padding: 170px 0px 0px 0px;
+		margin: 0px 0px 78px 0px;
+		@media (max-width: $md3+px){
+			font-size: 35px;
+			margin: 0px 0px 55px 0px;
+		}
+		@media (max-width: $md4+px){
+			padding: 140px 0px 0px 0px;
+		}
+	}
+	position: relative;
+	&:after{
+		content: '';
+		display: block;
+		width: 60%;
+		height: 23%;
+		position: absolute;
+		top: 30%;
+		left: 24%;
+		z-index: 100;
+		// background: transparent;
+		background-image:  url('../img/newsletter/get_notified.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		@media (max-width: $md4+px){
+			background-image: none;	
+		}
+	}
+}
+.newsletter-form {
+	position: relative;
+	margin: 0 auto;
+	width: 847px;
+	padding: 0px 0px 124px 0px;
+	@media (max-width: $md2+px){
+		width: 780px;
+	}
+	@media (max-width: $md3+px){
+		max-width: 600px;
+	}
+
+	@media (max-width: $md4+px){
+		max-width: 400px;	
+		padding: 0px 0px 90px 0px;
+	}
+	@media (max-width: $md6+px){
+		max-width: 310px;
+	}
+
+	&__input {
+		height: 71px;
+		border-radius: 35px;
+		width: 100%;
+		padding-left: 27px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		letter-spacing: 0.2px;
+		color: #333333;
+		@media (max-width: $md4+px){
+			height: 50px;
+			font-size: 18px;
+		}
+		@media (max-width: $md4+px){
+			font-size: 16px;
+		}
+	}
+
+	&__btn {
+		height: 60px;
+		width: 198px;
+		border-radius: 30px;
+		position: absolute;
+		top: 6px;
+		right: 8px;
+		cursor: pointer;
+		background-color: #a165f4;
+		background-image: linear-gradient(28deg, #8c84f9 0%, #9c6cf5 100%);
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		font-size: 20px;
+		letter-spacing: 0.2px;
+		color: #fffefe;
+		@media (max-width: $md4+px){
+			position: static;
+			background: #fffefe;
+			color: #9c6cf5;
+			margin: 10px 0px 0px 0px;
+			height: 40px;
+			border-radius: 20px;
+			margin: 10px auto 0px;
+			display: block;
+		}
+	}
+}

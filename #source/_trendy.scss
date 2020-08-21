@@ -1,0 +1,42 @@
+.trendy {
+	margin: 0px 0px 116px 0px;
+	&__title {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 50px;
+		font-weight: 700;
+		color: #333333;
+		letter-spacing: 0.5px;
+		text-transform: capitalize;
+		text-align: center;
+		padding: 90px 0px 0px 0px;
+		margin: 0px 0px 138px 0px;
+		@media (max-width: $md3+px){
+			font-size: 35px;
+			margin: 0px 0px 70px 0px;
+		}
+	}
+}
+.trendy-catalog {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	// justify-content: space-around;
+	max-width: 1171px;
+	margin: 0 auto;
+	justify-content: center;
+	&__column{
+		margin: 0px 0px 60px 0px;
+		flex: 0 0 33.333%;
+		@media (max-width: $md3+px){
+			margin: 0px 10px 0px 10px;
+		}
+		
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		// height: 100%;
+		
+	}
+}
+

@@ -1,0 +1,80 @@
+@import 'null';
+
+
+//Шрифты
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@font-face {
+	font-family: 'MyriadPro';
+	src: url('fonts/8145.eot');
+	src: local('☺'), url('fonts/8145.woff') format('woff'), url('fonts/8145.ttf') format('truetype'), url('fonts/8145.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//Breackpoints
+
+$min-width: 320px;
+$md1: 1200;
+$md2: 1033;
+$md3: 792;
+$md4: 600;
+$md5: 480;
+$md6: 400;
+
+//Стили для Header
+@import 'header';
+
+body{
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		// background: transparent;
+		background-image: url('../img/18-layers.png');
+		background-repeat: no-repeat;
+	}
+	background-image: url('../img/18-layers.png');
+	background-repeat: no-repeat;
+
+}
+a{
+	cursor: pointer;
+	color: inherit;
+}
+.clearfix{
+	clear: both;
+}
+.wrapper{
+	max-width: 1380px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	box-shadow: -1px 5px 48px 3px rgba(237, 235, 253, 0.75);
+}
+.ibg {
+	background-size: cover;
+	img{display: none;}
+}
+//Стили для карточек товаров 
+@import 'staff';
+
+//Стили для блока Trendy
+@import 'trendy';
+
+//Стили для блока Brands
+@import 'brands';
+
+//Стили для блока Showcase
+@import 'showcase';
+
+//Стили для блока Newsletter
+@import 'newsletter';
+
+//Стили для Footer
+@import 'footer';
